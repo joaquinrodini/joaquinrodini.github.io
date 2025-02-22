@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-rd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/style.scss:css/style.css",
+    "sass:watch": "sass --watch scss/style.scss:css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.85.0"
+  }
+}
