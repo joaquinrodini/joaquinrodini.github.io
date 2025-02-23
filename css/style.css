@@ -1,32 +1,53 @@
-h1 {
-  font-size: 40px;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 500;
-}
-
-p {
-  font-size: 20px;
-  font-weight: 300;
-  opacity: 0.8;
-}
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 500;
+}
+h2 > span {
+  font-size: 18px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+ul > li {
+  list-style: none;
+}
+
 body {
   background-color: #0d1120;
   color: #fafafa;
   font-family: "Outfit", serif;
+  padding-inline: 60px;
 }
 body header {
   position: fixed;
+  margin-top: 60px;
+}
+body header .claim {
+  margin-bottom: 60px;
+}
+body header .claim h1 {
+  margin-bottom: 16px;
+}
+body header .claim h2 span {
+  display: inline-block;
+  margin-top: 30px;
 }
 body header nav li {
   font-size: 20px;
@@ -37,10 +58,17 @@ body header nav li > a {
   text-decoration: none;
   color: inherit;
 }
+body header .socials ul {
+  display: flex;
+  gap: 16px;
+}
 body main {
-  background: pink;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: gray;
   float: right;
-  width: 50%;
+  width: 60%;
   height: 200vh;
 }
 

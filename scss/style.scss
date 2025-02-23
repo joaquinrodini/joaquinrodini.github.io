@@ -1,21 +1,29 @@
 @import "helpers";
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-$bg-color: #0d1120;
-$bg-text: #fafafa;
-
 body {
   background-color: $bg-color;
   color: $bg-text;
   font-family: "Outfit", serif;
+  padding-inline: 60px;
 
+  /////////////// Header
   header {
     position: fixed;
+    margin-top: 60px;
+
+    .claim {
+      margin-bottom: 60px;
+      h1 {
+        margin-bottom: 16px;
+      }
+      h2 {
+        span {
+          display: inline-block;
+          margin-top: 30px;
+        }
+      }
+    }
+
     nav {
       li {
         font-size: 20px;
@@ -28,12 +36,23 @@ body {
         }
       }
     }
+
+    .socials {
+      ul {
+        display: flex;
+        gap: 16px;
+      }
+    }
   }
 
+  //////////////// Main
   main {
-    background: pink;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: gray;
     float: right;
-    width: 50%;
+    width: 60%;
     height: 200vh;
   }
 }
