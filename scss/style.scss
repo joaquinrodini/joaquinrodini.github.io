@@ -1,4 +1,4 @@
-@import "helpers";
+@import "globals";
 
 body {
   background-color: $bg-color;
@@ -25,14 +25,41 @@ body {
     }
 
     nav {
-      li {
-        font-size: 20px;
-        font-weight: 300;
-        text-transform: capitalize;
+      margin-bottom: 60px;
+      ul {
+        li {
+          position: relative;
+          font-size: 16px;
+          font-weight: 300;
+          text-transform: uppercase;
 
-        > a {
-          text-decoration: none;
-          color: inherit;
+          > a {
+            text-decoration: none;
+            color: inherit;
+
+            &::before {
+              content: "";
+              display: block;
+              width: 40px;
+              height: 1px;
+              background: $bg-text;
+              position: absolute;
+              top: 50%;
+              left: -60px;
+            }
+
+            &:hover {
+              color: $primary;
+              font-weight: 500;
+
+              &::before {
+                background: $primary;
+              }
+            }
+          }
+        }
+        li:not(:last-child) {
+          margin-bottom: 24px;
         }
       }
     }
@@ -41,6 +68,30 @@ body {
       ul {
         display: flex;
         gap: 16px;
+
+        li {
+          > a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover {
+              color: $primary;
+            }
+          }
+          .icon-goodreads {
+            &:before {
+              color: $bg-text;
+            }
+
+            &:hover::before {
+              color: $primary;
+            }
+          }
+
+          i {
+            font-size: 20px;
+          }
+        }
       }
     }
   }
@@ -50,9 +101,51 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    background: gray;
     float: right;
     width: 60%;
     height: 200vh;
+    padding-top: 80vh;
+    padding-inline: 60px;
+
+    section {
+      position: relative;
+      padding-block: 80px;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 1px;
+        background-color: $bg-text;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.4;
+      }
+
+      &#projects {
+        .card {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          width: fit-content;
+
+          img {
+            height: 180px;
+            width: auto;
+          }
+
+          .card-content {
+            h3 {
+              margin-bottom: 4px;
+            }
+            i {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
   }
 }
