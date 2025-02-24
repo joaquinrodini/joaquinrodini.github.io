@@ -202,3 +202,46 @@ body {
     }
   }
 }
+
+@media (min-width: 360px) and (max-width: 1200px) {
+  body {
+    padding-inline: 40px;
+    header {
+      position: static;
+      margin-bottom: 60px;
+
+      .socials {
+        ul {
+          gap: 20px;
+        }
+      }
+    }
+    main {
+      position: static;
+      float: none;
+      padding: 0;
+      width: 100%;
+
+      section {
+        &#projects {
+          .card {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        }
+
+        &#experience {
+          .job {
+            display: block;
+          }
+        }
+
+        &#about {
+          .pill-list {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}

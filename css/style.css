@@ -194,4 +194,33 @@ body main footer {
   padding-block: 80px;
 }
 
+@media (min-width: 360px) and (max-width: 1200px) {
+  body {
+    padding-inline: 40px;
+  }
+  body header {
+    position: static;
+    margin-bottom: 60px;
+  }
+  body header .socials ul {
+    gap: 20px;
+  }
+  body main {
+    position: static;
+    float: none;
+    padding: 0;
+    width: 100%;
+  }
+  body main section#projects .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  body main section#experience .job {
+    display: block;
+  }
+  body main section#about .pill-list {
+    width: auto;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
