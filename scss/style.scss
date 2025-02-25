@@ -1,10 +1,22 @@
 @import "globals";
 
+// Animation
+@keyframes floatAnimation {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-15px) translateX(5px);
+  }
+}
+
 body {
   background-color: $bg-color;
   color: $bg-text;
   font-family: "Outfit", serif;
   padding-inline: 60px;
+  overflow-x: hidden;
 
   /////////////// Header
   header {
@@ -98,7 +110,7 @@ body {
 
   //////////////// Main
   main {
-    position: absolute;
+    position: relative;
     right: 0;
     top: 0;
     float: right;
@@ -106,6 +118,42 @@ body {
     height: 200vh;
     padding-top: 80vh;
     padding-inline: 60px;
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.3;
+      filter: blur(30px);
+      animation: floatAnimation 4s cubic-bezier(0.3, 0.6, 0.3, 1) infinite;
+
+      &.circle-big {
+        background: rgb(156, 220, 229);
+        background: linear-gradient(
+          104deg,
+          rgb(39, 160, 175) 50%,
+          rgba(100, 179, 244, 1) 100%
+        );
+        width: 250px;
+        height: 250px;
+        right: -180px;
+        top: 20%;
+        transform: translateY(-50%);
+      }
+
+      &.circle-med {
+        background: rgb(168, 25, 133);
+        background: linear-gradient(
+          87deg,
+          rgba(168, 25, 133, 1) 20%,
+          rgba(100, 179, 244, 1) 100%
+        );
+        width: 150px;
+        height: 150px;
+        top: 5%;
+        right: 200px;
+        animation-delay: 1.5s;
+      }
+    }
 
     section {
       position: relative;
@@ -199,6 +247,13 @@ body {
 
     footer {
       padding-block: 80px;
+
+      .contact-email {
+        i {
+          font-size: 12px;
+          margin-right: 4px;
+        }
+      }
     }
   }
 }
@@ -222,11 +277,16 @@ body {
       padding: 0;
       width: 100%;
 
+      .circle {
+        display: none;
+      }
+
       section {
         &#projects {
           .card {
             flex-direction: column;
             align-items: flex-start;
+            max-width: 500px;
           }
         }
 
