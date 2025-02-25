@@ -178,9 +178,10 @@ body {
           align-items: center;
           gap: 20px;
           width: fit-content;
+          padding: 10px;
 
           img {
-            height: 180px;
+            height: 150px;
             width: auto;
           }
 
@@ -236,10 +237,16 @@ body {
 
           .pill {
             display: block;
-            background: rgba($primary, 0.1);
+            background-color: rgba($primary, 0.1);
             color: $primary;
             padding: 8px 12px;
             border-radius: 50px;
+            cursor: default;
+
+            &:hover {
+              color: $bg-color;
+              background-color: $primary;
+            }
           }
         }
       }
@@ -249,9 +256,14 @@ body {
       padding-block: 80px;
 
       .contact-email {
+        font-size: 16px;
         i {
           font-size: 12px;
           margin-right: 4px;
+        }
+
+        &:hover {
+          color: $primary;
         }
       }
     }

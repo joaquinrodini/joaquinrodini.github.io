@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 $bg-color: #0d1120;
 $bg-text: #fafafa;
 $primary: #58e7f7;
