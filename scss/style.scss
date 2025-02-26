@@ -7,7 +7,7 @@
     transform: translateY(0) translateX(0);
   }
   50% {
-    transform: translateY(-10px) translateX(5px);
+    transform: translateY(-30px) translateX(20px);
   }
 }
 
@@ -124,7 +124,7 @@ body {
       border-radius: 50%;
       opacity: 0.3;
       filter: blur(30px);
-      animation: floatAnimation 4s cubic-bezier(0.3, 0.6, 0.3, 1) infinite;
+      animation: floatAnimation 7s cubic-bezier(0.3, 0.6, 0.3, 1) infinite;
 
       &.circle-big {
         background: rgb(156, 220, 229);
@@ -149,7 +149,7 @@ body {
         );
         width: 150px;
         height: 150px;
-        top: 5%;
+        top: 9%;
         right: 200px;
         animation-delay: 1.5s;
       }
@@ -178,10 +178,22 @@ body {
           align-items: center;
           gap: 20px;
           width: fit-content;
-          padding: 10px;
+          padding: 20px;
+
+          &:hover {
+            background-color: rgba(hsl(227, 42%, 12%), 0.8);
+            outline: 1px solid rgba(gray, 0.2);
+            box-shadow: 0px 4px 20px rgba(54, 54, 54, 0.1); // Very faded blue shadow
+
+            .card-content {
+              p {
+                color: white;
+              }
+            }
+          }
 
           img {
-            height: 150px;
+            height: 140px;
             width: auto;
           }
 
@@ -275,7 +287,7 @@ body {
     height: 550px;
     background: radial-gradient(
       circle,
-      rgba(18, 140, 184, 0.3) 0%,
+      rgba(18, 140, 184, 0.5) 0%,
       rgba(0, 0, 0, 0) 80%
     );
     pointer-events: none;
