@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
 html {
@@ -183,16 +184,23 @@ body main section#projects .card {
   gap: 20px;
   width: fit-content;
   padding: 20px;
+  outline: 1px solid transparent;
 }
 body main section#projects .card:hover {
   background-color: rgba(17.748, 23.3172, 43.452, 0.8);
   outline: 1px solid rgba(128, 128, 128, 0.2);
   box-shadow: 0px 4px 20px rgba(54, 54, 54, 0.1);
 }
+body main section#projects .card:hover .card-content h3 > i {
+  color: #58e7f7;
+}
 body main section#projects .card:hover .card-content p {
   color: white;
 }
-body main section#projects .card img {
+body main section#projects .card .img-container {
+  z-index: 999;
+}
+body main section#projects .card .img-container img {
   height: 140px;
   width: auto;
 }
@@ -252,20 +260,20 @@ body main footer .contact-email i {
   font-size: 12px;
   margin-right: 4px;
 }
-body main footer .contact-email:hover {
+body main footer .contact-email:hover i {
   color: #58e7f7;
 }
 body .cursor-light {
   position: fixed;
-  width: 550px;
-  height: 550px;
+  width: 600px;
+  height: 600px;
   background: radial-gradient(circle, rgba(18, 140, 184, 0.5) 0%, rgba(0, 0, 0, 0) 80%);
   pointer-events: none;
   transform: translate(-50%, -50%);
   filter: blur(20px);
   mix-blend-mode: soft-light;
   transition: transform 0.05s linear, opacity 0.3s ease; /* Smooth transition for opacity */
-  z-index: 9999;
+  z-index: 99;
   opacity: 0; /* Initially hidden */
 }
 
