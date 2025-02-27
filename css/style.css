@@ -220,6 +220,13 @@ body main section#experience .job .job-title {
 body main section#experience .job:not(:last-child) {
   margin-bottom: 40px;
 }
+body main section#experience .resume-btn {
+  display: inline-block;
+  font-size: 16px;
+}
+body main section#experience .resume-btn:hover {
+  color: #58e7f7;
+}
 body main section#about .bio {
   margin-bottom: 60px;
 }
