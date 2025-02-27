@@ -262,6 +262,7 @@ body {
             color: $primary;
             padding: 8px 12px;
             border-radius: 50px;
+            width: fit-content;
             cursor: default;
 
             &:hover {
@@ -292,6 +293,7 @@ body {
     }
   }
 
+  // Utilities ///////////////////////
   .cursor-light {
     position: fixed;
     width: 600px;
@@ -308,6 +310,31 @@ body {
     transition: transform 0.05s linear, opacity 0.3s ease; /* Smooth transition for opacity */
     z-index: 99;
     opacity: 0; /* Initially hidden */
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: $bg-text;
+    color: $bg-color;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    &:hover {
+      background-color: $bg-color;
+      color: $primary;
+      transform: scale(1.1);
+    }
+  }
+  .back-to-top.show {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
