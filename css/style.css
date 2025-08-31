@@ -201,8 +201,10 @@ body main section#projects .card .img-container {
   z-index: 999;
 }
 body main section#projects .card .img-container img {
-  height: 140px;
-  width: auto;
+  display: block;
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
 }
 body main section#projects .card .card-content h3 {
   margin-bottom: 4px;
