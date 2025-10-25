@@ -207,6 +207,7 @@ body main section#projects .card .img-container img {
   object-fit: cover;
 }
 body main section#projects .card .card-content h3 {
+  display: contents;
   margin-bottom: 4px;
 }
 body main section#projects .card .card-content i {
