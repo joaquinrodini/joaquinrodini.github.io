@@ -15,7 +15,7 @@ body {
   background-color: $bg-color;
   color: $bg-text;
   font-family: "Outfit", serif;
-  padding-inline: 60px;
+  padding-inline: 80px;
   overflow-x: hidden;
 
   /////////////// Header
@@ -60,7 +60,8 @@ body {
               left: -60px;
             }
 
-            &:hover {
+            &:hover,
+            &:focus {
               color: $primary;
               font-weight: 500;
 
@@ -86,7 +87,8 @@ body {
             color: inherit;
             text-decoration: none;
 
-            &:hover {
+            &:hover,
+            &:focus {
               color: $primary;
             }
           }
@@ -95,7 +97,8 @@ body {
               color: $bg-text;
             }
 
-            &:hover::before {
+            &:hover::before,
+            &:focus::before {
               color: $primary;
             }
           }
@@ -114,10 +117,10 @@ body {
     right: 0;
     top: 0;
     float: right;
-    width: 60%;
+    width: 70%;
     height: 200vh;
-    padding-top: 80vh;
-    padding-inline: 60px;
+    padding-top: 20vh;
+    // padding-inline: 60px;
 
     .circle {
       position: absolute;
@@ -169,7 +172,7 @@ body {
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        opacity: 0.4;
+        opacity: 0.2;
       }
 
       &#projects {
@@ -181,7 +184,8 @@ body {
           padding: 20px;
           outline: 1px solid transparent;
 
-          &:hover {
+          &:hover,
+          &:focus {
             background-color: rgba(hsl(227, 42%, 12%), 0.8);
             outline: 1px solid rgba(gray, 0.2);
             box-shadow: 0px 4px 20px rgba(54, 54, 54, 0.1); // Very faded blue shadow
@@ -202,7 +206,7 @@ body {
             z-index: 999;
             img {
               display: block;
-              width: 220px;
+              width: 250px;
               height: 150px;
               object-fit: cover;
             }
@@ -210,8 +214,11 @@ body {
 
           .card-content {
             h3 {
-              display: contents;
-              margin-bottom: 4px;
+              // display: contents;
+              // margin-bottom: 4px;
+              display: flex;
+              align-items: center;
+              gap: 8px;
             }
             i {
               font-size: 12px;
@@ -237,7 +244,8 @@ body {
           display: inline-block;
           font-size: 16px;
 
-          &:hover {
+          &:hover,
+          &:focus {
             color: $primary;
           }
         }
@@ -295,7 +303,8 @@ body {
           margin-right: 4px;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
           i {
             color: $primary;
           }
@@ -337,7 +346,8 @@ body {
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $bg-color;
       color: $primary;
       transform: scale(1.1);

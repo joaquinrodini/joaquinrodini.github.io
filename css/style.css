@@ -57,7 +57,7 @@ body {
   background-color: #0d1120;
   color: #fafafa;
   font-family: "Outfit", serif;
-  padding-inline: 60px;
+  padding-inline: 80px;
   overflow-x: hidden;
 }
 body header {
@@ -97,11 +97,11 @@ body header nav ul li > a::before {
   top: 50%;
   left: -60px;
 }
-body header nav ul li > a:hover {
+body header nav ul li > a:hover, body header nav ul li > a:focus {
   color: #58e7f7;
   font-weight: 500;
 }
-body header nav ul li > a:hover::before {
+body header nav ul li > a:hover::before, body header nav ul li > a:focus::before {
   background: #58e7f7;
 }
 body header nav ul li:not(:last-child) {
@@ -115,13 +115,13 @@ body header .socials ul li > a {
   color: inherit;
   text-decoration: none;
 }
-body header .socials ul li > a:hover {
+body header .socials ul li > a:hover, body header .socials ul li > a:focus {
   color: #58e7f7;
 }
 body header .socials ul li .icon-goodreads:before {
   color: #fafafa;
 }
-body header .socials ul li .icon-goodreads:hover::before {
+body header .socials ul li .icon-goodreads:hover::before, body header .socials ul li .icon-goodreads:focus::before {
   color: #58e7f7;
 }
 body header .socials ul li i {
@@ -132,10 +132,9 @@ body main {
   right: 0;
   top: 0;
   float: right;
-  width: 60%;
+  width: 70%;
   height: 200vh;
-  padding-top: 80vh;
-  padding-inline: 60px;
+  padding-top: 20vh;
 }
 body main .circle {
   position: absolute;
@@ -176,7 +175,7 @@ body main section::after {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0.4;
+  opacity: 0.2;
 }
 body main section#projects .card {
   display: flex;
@@ -186,15 +185,15 @@ body main section#projects .card {
   padding: 20px;
   outline: 1px solid transparent;
 }
-body main section#projects .card:hover {
+body main section#projects .card:hover, body main section#projects .card:focus {
   background-color: rgba(17.748, 23.3172, 43.452, 0.8);
   outline: 1px solid rgba(128, 128, 128, 0.2);
   box-shadow: 0px 4px 20px rgba(54, 54, 54, 0.1);
 }
-body main section#projects .card:hover .card-content h3 > i {
+body main section#projects .card:hover .card-content h3 > i, body main section#projects .card:focus .card-content h3 > i {
   color: #58e7f7;
 }
-body main section#projects .card:hover .card-content p {
+body main section#projects .card:hover .card-content p, body main section#projects .card:focus .card-content p {
   color: white;
 }
 body main section#projects .card .img-container {
@@ -202,13 +201,14 @@ body main section#projects .card .img-container {
 }
 body main section#projects .card .img-container img {
   display: block;
-  width: 220px;
+  width: 250px;
   height: 150px;
   object-fit: cover;
 }
 body main section#projects .card .card-content h3 {
-  display: contents;
-  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 body main section#projects .card .card-content i {
   font-size: 12px;
@@ -227,7 +227,7 @@ body main section#experience .resume-btn {
   display: inline-block;
   font-size: 16px;
 }
-body main section#experience .resume-btn:hover {
+body main section#experience .resume-btn:hover, body main section#experience .resume-btn:focus {
   color: #58e7f7;
 }
 body main section#about .bio {
@@ -271,7 +271,7 @@ body main footer .contact-email i {
   font-size: 12px;
   margin-right: 4px;
 }
-body main footer .contact-email:hover i {
+body main footer .contact-email:hover i, body main footer .contact-email:focus i {
   color: #58e7f7;
 }
 body .cursor-light {
@@ -302,7 +302,7 @@ body .back-to-top {
   visibility: hidden;
   z-index: 1000;
 }
-body .back-to-top:hover {
+body .back-to-top:hover, body .back-to-top:focus {
   background-color: #0d1120;
   color: #58e7f7;
   transform: scale(1.1);
