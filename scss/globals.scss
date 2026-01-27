@@ -9,9 +9,16 @@ html {
   scroll-behavior: smooth;
 }
 
-$bg-color: #0d1120;
-$bg-text: #fafafa;
-$primary: #58e7f7;
+$bg-color: #fafafa;
+$bg-text: #1c1c1c;
+$primary: #4d0e90;
+
+body {
+  background-color: #fafafa;
+  color: #1c1c1c;
+  font-family: "Outfit", serif;
+  overflow-x: hidden;
+}
 
 h1 {
   font-size: 36px;
