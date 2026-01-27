@@ -14,6 +14,8 @@ body {
   color: #1c1c1c;
   font-family: "Outfit", serif;
   overflow-x: hidden;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -50,6 +52,154 @@ ul > li {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+header {
+  padding: 2rem 0;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+header nav ul.navi {
+  margin-bottom: 20px;
+}
+header nav ul.socials {
+  gap: 2rem;
+}
+header nav ul.socials a {
+  font-size: 20px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #1c1c1c;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  transition: all 0.3s;
+}
+header nav ul li a:hover {
+  color: #4d0e90;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0 6rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #4d0e90;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.hero .subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.hero .tagline {
+  font-size: 1rem;
+}
+
+.projects {
+  padding: 4rem 0;
+}
+.projects .project {
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+.projects .project .project-image {
+  margin-bottom: 2rem;
+}
+.projects .project .project-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.projects .project h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.projects .project .project-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgb(66.25, 66.25, 66.25);
+  margin-bottom: 1.5rem;
+}
+.projects .project .view-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #1c1c1c;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #1c1c1c;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+.projects .project .view-link:hover {
+  background-color: #1c1c1c;
+  color: #fafafa;
+}
+
+.experience {
+  padding: 4rem 0;
+}
+
+.about {
+  padding: 4rem 0;
+}
+
+footer {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  header nav ul {
+    gap: 1.5rem;
+  }
+}
+body .back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #fafafa;
+  color: #0d1120;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+body .back-to-top:hover,
+body .back-to-top:focus {
+  background-color: #0d1120;
+  color: #58e7f7;
+  transform: scale(1.1);
+}
+
+body .back-to-top.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*# sourceMappingURL=style.css.map */

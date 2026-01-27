@@ -1,1 +1,179 @@
 @import "globals";
+
+header {
+  padding: 2rem 0;
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+
+      &.navi {
+        margin-bottom: 20px;
+      }
+
+      &.socials {
+        gap: 2rem;
+        a {
+          font-size: 20px;
+        }
+      }
+
+      li {
+        a {
+          text-decoration: none;
+          color: $bg-text;
+          font-size: 1rem;
+          letter-spacing: 0.5px;
+          transition: color 0.3s ease;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $primary;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Main Content
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// Hero Section
+.hero {
+  text-align: center;
+  padding: 4rem 0 6rem;
+
+  h1 {
+    font-size: 3rem;
+    color: $primary;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    // color: lighten($text-color, 20%);
+  }
+}
+
+// Projects Section
+.projects {
+  padding: 4rem 0;
+
+  .project {
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    text-align: center;
+
+    .project-image {
+      margin-bottom: 2rem;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      //   color: $text-color;
+    }
+
+    .project-description {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: lighten($bg-text, 15%);
+      margin-bottom: 1.5rem;
+    }
+
+    .view-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid $bg-text;
+      border-radius: 4px;
+      text-decoration: none;
+      color: $bg-text;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $bg-text;
+        color: $bg-color;
+      }
+    }
+  }
+}
+
+// Experience Section
+.experience {
+  padding: 4rem 0;
+}
+
+// About Section
+.about {
+  padding: 4rem 0;
+}
+
+// Footer
+footer {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .hero {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  header nav ul {
+    gap: 1.5rem;
+  }
+}
+
+body .back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #fafafa;
+  color: #0d1120;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+body .back-to-top:hover,
+body .back-to-top:focus {
+  background-color: #0d1120;
+  color: #58e7f7;
+  transform: scale(1.1);
+}
+body .back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
