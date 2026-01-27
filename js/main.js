@@ -1,27 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const cursorLight = document.querySelector(".cursor-light");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const cursorLight = document.querySelector(".cursor-light");
 
-  let timeout;
-  let isMoving = false;
+//   let timeout;
+//   let isMoving = false;
 
-  document.addEventListener("mousemove", (e) => {
-    cursorLight.style.left = `${e.clientX}px`;
-    cursorLight.style.top = `${e.clientY}px`;
+//   document.addEventListener("mousemove", (e) => {
+//     cursorLight.style.left = `${e.clientX}px`;
+//     cursorLight.style.top = `${e.clientY}px`;
 
-    cursorLight.style.opacity = "1";
+//     cursorLight.style.opacity = "1";
 
-    // If the mouse is moving, reset the timeout to fade out the cursor light later
-    // if (!isMoving) {
-    //   isMoving = true;
-    //   clearTimeout(timeout);
-    // }
+//     // If the mouse is moving, reset the timeout to fade out the cursor light later
+//     // if (!isMoving) {
+//     //   isMoving = true;
+//     //   clearTimeout(timeout);
+//     // }
 
-    // timeout = setTimeout(() => {
-    //   cursorLight.style.opacity = "1";
-    //   isMoving = false;
-    // }, 300);
-  });
-});
+//     // timeout = setTimeout(() => {
+//     //   cursorLight.style.opacity = "1";
+//     //   isMoving = false;
+//     // }, 300);
+//   });
+// });
 
 document.addEventListener("DOMContentLoaded", () => {
   const backToTopButton = document.getElementById("backToTop");
