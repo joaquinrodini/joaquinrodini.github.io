@@ -1,3 +1,24 @@
+// CSS Variables for theming
+:root {
+  --bg-color: #fafafa;
+  --bg-text: #1c1c1c;
+  --primary: #2611b2;
+  --border-color: #c1c1c1;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1c1c1c;
+  --bg-text: #fafafa;
+  --primary: #9284f9;
+  --border-color: #3a3a3a;
+}
+
+// Use CSS variables
+$bg-color: var(--bg-color);
+$bg-text: var(--bg-text);
+$primary: var(--primary);
+$border-color: var(--border-color);
+
 * {
   padding: 0;
   margin: 0;
@@ -9,9 +30,14 @@ html {
   scroll-behavior: smooth;
 }
 
-$bg-color: #0d1120;
-$bg-text: #fafafa;
-$primary: #58e7f7;
+body {
+  background-color: $bg-color;
+  color: $bg-text;
+  font-family: "Outfit", serif;
+  overflow-x: hidden;
+  max-width: 1600px;
+  margin: 0 auto;
+}
 
 h1 {
   font-size: 36px;
@@ -34,6 +60,12 @@ h3 {
   font-weight: 500;
 }
 
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+}
+
 p {
   font-size: 16px;
   line-height: 25px;
@@ -50,4 +82,10 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $primary;
+    font-weight: bold;
+  }
 }

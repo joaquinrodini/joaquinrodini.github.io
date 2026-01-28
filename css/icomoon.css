@@ -1,18 +1,20 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ub8f8j');
-  src:  url('fonts/icomoon.eot?ub8f8j#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ub8f8j') format('truetype'),
-    url('fonts/icomoon.woff?ub8f8j') format('woff'),
-    url('fonts/icomoon.svg?ub8f8j#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?ub8f8j");
+  src:
+    url("fonts/icomoon.eot?ub8f8j#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?ub8f8j") format("truetype"),
+    url("fonts/icomoon.woff?ub8f8j") format("woff"),
+    url("fonts/icomoon.svg?ub8f8j#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -26,8 +28,8 @@
 }
 
 .icon-goodreads:before {
-  content: "\e900";
-  color: #630;
+  content: "\e902";
+  /* color: #630; */
 }
 .icon-pencil:before {
   content: "\e905";
@@ -40,4 +42,12 @@
 }
 .icon-linkedin:before {
   content: "\eac9";
+}
+
+.icon-moon:before {
+  content: "\e901";
+}
+
+.icon-sun:before {
+  content: "\e900";
 }
