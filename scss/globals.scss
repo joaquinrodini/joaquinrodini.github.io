@@ -1,6 +1,23 @@
-$bg-color: #fafafa;
-$bg-text: #1c1c1c;
-$primary: #2611b2;
+// CSS Variables for theming
+:root {
+  --bg-color: #fafafa;
+  --bg-text: #1c1c1c;
+  --primary: #2611b2;
+  --border-color: #c1c1c1;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1c1c1c;
+  --bg-text: #fafafa;
+  --primary: #6b5dd6;
+  --border-color: #3a3a3a;
+}
+
+// Use CSS variables
+$bg-color: var(--bg-color);
+$bg-text: var(--bg-text);
+$primary: var(--primary);
+$border-color: var(--border-color);
 
 * {
   padding: 0;

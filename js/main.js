@@ -56,7 +56,33 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observe all project articles
 document.querySelectorAll(".project").forEach((project) => {
   observer.observe(project);
+});
+
+// Dark mode toggle
+const themeToggle = document.getElementById("themeToggle");
+const htmlElement = document.documentElement;
+
+const currentTheme = localStorage.getItem("theme") || "light";
+htmlElement.setAttribute("data-theme", currentTheme);
+
+function updateIcon(theme) {
+  const icon = themeToggle.querySelector("i");
+  if (theme === "dark") {
+    icon.className = "icon-sun";
+  } else {
+    icon.className = "icon-moon";
+  }
+}
+
+updateIcon(currentTheme);
+
+themeToggle.addEventListener("click", () => {
+  const currentTheme = htmlElement.getAttribute("data-theme");
+  const newTheme = currentTheme === "light" ? "dark" : "light";
+
+  htmlElement.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+  updateIcon(newTheme);
 });

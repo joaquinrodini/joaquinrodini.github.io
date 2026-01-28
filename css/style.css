@@ -1,3 +1,17 @@
+:root {
+  --bg-color: #fafafa;
+  --bg-text: #1c1c1c;
+  --primary: #2611b2;
+  --border-color: #c1c1c1;
+}
+
+[data-theme=dark] {
+  --bg-color: #1c1c1c;
+  --bg-text: #fafafa;
+  --primary: #6b5dd6;
+  --border-color: #3a3a3a;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -10,8 +24,8 @@ html {
 }
 
 body {
-  background-color: #fafafa;
-  color: #1c1c1c;
+  background-color: var(--bg-color);
+  color: var(--bg-text);
   font-family: "Outfit", serif;
   overflow-x: hidden;
   max-width: 1600px;
@@ -60,7 +74,7 @@ a {
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #2611b2;
+  color: var(--primary);
   font-weight: bold;
 }
 
@@ -84,7 +98,7 @@ header nav ul.socials a {
 }
 header nav ul li a {
   text-decoration: none;
-  color: #1c1c1c;
+  color: var(--bg-text);
   font-size: 1rem;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
@@ -102,7 +116,7 @@ main {
   padding: 4rem 0 6rem;
 }
 .hero h1 {
-  color: #2611b2;
+  color: var(--primary);
 }
 .hero .subtitle {
   font-size: 1.25rem;
@@ -146,16 +160,16 @@ main {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1.5rem;
-  border: 1px solid #1c1c1c;
+  border: 1px solid var(--bg-text);
   border-radius: 4px;
   text-decoration: none;
-  color: #1c1c1c;
+  color: var(--bg-text);
   font-size: 0.9rem;
   transition: all 0.3s ease;
 }
 .projects .project .view-link:hover, .projects .project .view-link:focus {
-  background-color: #1c1c1c;
-  color: #fafafa;
+  background-color: var(--bg-text);
+  color: var(--bg-color);
 }
 
 .experience {
@@ -184,14 +198,14 @@ main {
 .experience .skills .pill-list .pill,
 .experience .languages .pill-list .pill {
   padding: 6px 20px;
-  outline: 1px solid #c1c1c1;
+  outline: 1px solid var(--border-color);
   border-radius: 180px;
   cursor: default;
 }
 .experience .skills .pill-list .pill:hover,
 .experience .languages .pill-list .pill:hover {
-  background-color: #2611b2;
-  color: #fafafa;
+  background-color: var(--primary);
+  color: var(--bg-color);
   outline: none;
 }
 .experience .resume-btn {
@@ -199,18 +213,18 @@ main {
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1.5rem;
-  border: 1px solid #1c1c1c;
+  border: 1px solid var(--bg-text);
   border-radius: 4px;
   text-decoration: none;
-  color: #1c1c1c;
+  color: var(--bg-text);
   font-size: 0.9rem;
   transition: all 0.3s ease;
   width: fit-content;
   margin: 0 auto;
 }
 .experience .resume-btn:hover, .experience .resume-btn:focus {
-  background-color: #1c1c1c;
-  color: #fafafa;
+  background-color: var(--bg-text);
+  color: var(--bg-color);
 }
 
 .about {
@@ -254,8 +268,8 @@ body .back-to-top {
 
 body .back-to-top:hover,
 body .back-to-top:focus {
-  background-color: #1c1c1c;
-  color: #fafafa;
+  background-color: var(--bg-text);
+  color: var(--bg-color);
   transform: scale(1.1);
   outline: none;
 }
@@ -263,6 +277,35 @@ body .back-to-top:focus {
 body .back-to-top.show {
   opacity: 1;
   visibility: visible;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--bg-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px;
+  z-index: 1000;
+  background-color: var(--bg-color);
+  outline: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background-color: var(--primary);
+  color: var(--bg-color);
+  outline: none;
 }
 
 /*# sourceMappingURL=style.css.map */
