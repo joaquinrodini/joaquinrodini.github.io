@@ -80,7 +80,7 @@ header nav ul.socials {
   gap: 2rem;
 }
 header nav ul.socials a {
-  font-size: 20px;
+  font-size: 24px;
 }
 header nav ul li a {
   text-decoration: none;
@@ -120,6 +120,13 @@ main {
   max-width: 700px;
   margin: 0 auto 4rem;
   text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+.projects .project.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 .projects .project .project-image {
   margin-bottom: 2rem;
@@ -153,27 +160,39 @@ main {
 
 .experience {
   padding: 4rem 0;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
 }
 .experience .job {
   display: flex;
   justify-content: space-between;
+}
+.experience .skills,
+.experience .languages {
+  text-align: center;
 }
 .experience .skills .pill-list,
 .experience .languages .pill-list {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  justify-content: center;
 }
 .experience .skills .pill-list .pill,
 .experience .languages .pill-list .pill {
   padding: 6px 20px;
-  border: 1px solid black;
+  outline: 1px solid #c1c1c1;
   border-radius: 180px;
+  cursor: default;
+}
+.experience .skills .pill-list .pill:hover,
+.experience .languages .pill-list .pill:hover {
+  background-color: #4d0e90;
+  color: #fafafa;
+  outline: none;
 }
 .experience .resume-btn {
   display: inline-flex;
@@ -196,6 +215,8 @@ main {
 
 .about {
   padding: 4rem 0;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 footer {
@@ -220,18 +241,23 @@ body .back-to-top {
   background-color: #fafafa;
   color: #0d1120;
   border: none;
+  outline: 1px solid gray;
   font-size: 24px;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
+  -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 body .back-to-top:hover,
 body .back-to-top:focus {
-  background-color: #0d1120;
-  color: #58e7f7;
+  background-color: #1c1c1c;
+  color: #fafafa;
   transform: scale(1.1);
+  outline: none;
 }
 
 body .back-to-top.show {
