@@ -8,7 +8,7 @@
 [data-theme=dark] {
   --bg-color: #1c1c1c;
   --bg-text: #fafafa;
-  --primary: #6b5dd6;
+  --primary: #9284f9;
   --border-color: #3a3a3a;
 }
 
@@ -261,9 +261,7 @@ body .back-to-top {
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
-  -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 body .back-to-top:hover,
