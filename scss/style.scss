@@ -66,10 +66,9 @@ main {
 
   .project {
     max-width: 700px;
-    margin: 0 auto 4rem;
+    margin: 0 auto 5rem;
     text-align: center;
 
-    // Add these lines
     opacity: 0;
     transform: translateY(20px);
     transition:
@@ -109,7 +108,8 @@ main {
       font-size: 0.9rem;
       transition: all 0.3s ease;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $bg-text;
         color: $bg-color;
       }
@@ -168,7 +168,8 @@ main {
     width: fit-content;
     margin: 0 auto;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $bg-text;
       color: $bg-color;
     }
